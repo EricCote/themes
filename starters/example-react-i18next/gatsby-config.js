@@ -20,7 +20,6 @@ module.exports = {
         name: `blog`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-theme-i18n`,
       options: {
@@ -40,9 +39,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: {
-          default: require.resolve(`./src/components/layout.js`),
-        },
+        // defaultLayouts: {
+        //   default: require.resolve(`./src/components/layout.js`),
+        // },
       },
     },
   ],

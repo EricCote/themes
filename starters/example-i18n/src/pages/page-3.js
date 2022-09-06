@@ -6,7 +6,6 @@ import Seo from "../components/seo"
 const Page3 = () => {
   return (
     <Layout>
-      <Seo title="Page 3" />
       <h1>Third page</h1>
       <p>This is the third page.</p>
       <p>
@@ -20,3 +19,7 @@ const Page3 = () => {
 }
 
 export default Page3
+
+export function Head() {
+  return <Seo title="Page 3" />
+}

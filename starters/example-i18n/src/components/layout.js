@@ -2,7 +2,7 @@ import * as React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import { MdxLink, LocalizedLink } from "gatsby-theme-i18n"
 
-const components = {
+const shortcodes = {
   a: MdxLink,
 }
 
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         <LocalizedLink to="/">Home</LocalizedLink>
       </header>
       <main>
-        <MDXProvider components={components}>{children}</MDXProvider>
+        <MDXProvider components={shortcodes}>{children}</MDXProvider>
       </main>
     </React.Fragment>
   )

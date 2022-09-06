@@ -8,7 +8,6 @@ const Page3 = () => {
   const { t } = useTranslation()
   return (
     <Layout>
-      <Seo title={t("thirdPage")} />
       <h1>{t("thirdPage")}</h1>
       <p>{t("thirdNote")}</p>
       <p>
@@ -22,3 +21,8 @@ const Page3 = () => {
 }
 
 export default Page3
+
+export function Head() {
+  const { t } = useTranslation()
+  return <Seo title={t("thirdPage")} />
+}

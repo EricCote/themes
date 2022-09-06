@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-theme",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -16,8 +16,8 @@
     "gatsby-theme-blog": "^4.0.0",
     "gatsby-theme-blog-darkmode": "^4.0.0",
     "gatsby-theme-notes": "^4.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"

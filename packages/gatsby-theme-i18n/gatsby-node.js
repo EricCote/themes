@@ -1,5 +1,5 @@
-const fs = require(`fs`)
-const path = require(`path`)
+const fs = require(`node:fs`)
+const path = require(`node:path`)
 const mkdirp = require(`mkdirp`)
 const { withDefaults } = require(`./utils/default-options`)
 const {
@@ -123,11 +123,14 @@ exports.onCreateNode = ({ node, actions }, themeOptions) => {
   const { defaultLang } = withDefaults(themeOptions)
 
   if (node.internal.type === `Mdx`) {
-    const name = path.basename(node.fileAbsolutePath, `.mdx`)
+    const name = path.basename(
+      node.fileAbsolutePath ?? node.internal.contentFilePath,
+      `.mdx`
+    )
 
     const isDefault = name === `index`
 
-    const lang = isDefault ? defaultLang : name.split(`.`)[1]
+    const lang = isDefault ? defaultLang : name.split(`.`)[1] ?? defaultLang
 
     createNodeField({ node, name: `locale`, value: lang })
     createNodeField({ node, name: `isDefault`, value: isDefault })
@@ -157,22 +160,35 @@ exports.onCreatePage = ({ page, actions }, themeOptions) => {
   })
 
   languages.forEach((locale) => {
+    let theFilePath = page.component
+
+    const [template, mdxFile] = page.component.split(`?__contentFilePath=`)
+
+    if (mdxFile) {
+      let [thePath, , ext] = mdxFile.split(`.`)
+      if (ext === `mdx`) {
+        theFilePath = `${thePath}.${ext}`
+      } else {
+        theFilePath = mdxFile
+      }
+
+      ;[thePath, ext] = theFilePath.split(`.`)
+      if (ext === `mdx` && locale.code !== defaultLang) {
+        if (fs.existsSync(`${thePath}.${locale.code}.${ext}`)) {
+          theFilePath = `${thePath}.${locale.code}.${ext}`
+        }
+      }
+      theFilePath = `${template}?__contentFilePath=${theFilePath}`
+    }
+
     const newPage = {
-      ...page,
       path: localizedPath({
         defaultLang,
         prefixDefault,
         locale: locale.code,
         path: originalPath,
       }),
-      matchPath: page.matchPath
-        ? localizedPath({
-            defaultLang,
-            prefixDefault,
-            locale: locale.code,
-            path: page.matchPath,
-          })
-        : page.matchPath,
+      component: theFilePath,
       context: {
         ...page.context,
         locale: locale.code,

@@ -9,7 +9,6 @@ const Index = ({ data }) => {
   const { t } = useTranslation()
   return (
     <Layout>
-      <Seo title={t("home")} />
       <h1>{t("helloWorld")}</h1>
       <p>{t("indexNote")}</p>
       <p>
@@ -46,7 +45,7 @@ const Index = ({ data }) => {
 export default Index
 
 export const query = graphql`
-  query($locale: String!) {
+  query ($locale: String!) {
     allFile(
       filter: {
         sourceInstanceName: { eq: "blog" }
@@ -64,3 +63,7 @@ export const query = graphql`
     }
   }
 `
+
+export function Head() {
+  return <Seo i18ntitle="home" />
+}

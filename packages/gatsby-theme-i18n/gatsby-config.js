@@ -1,5 +1,5 @@
 module.exports = () => {
   return {
-    plugins: [`gatsby-plugin-react-helmet`],
+    //    plugins: [`gatsby-plugin-react-helmet`],
   }
 }

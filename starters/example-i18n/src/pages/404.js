@@ -6,7 +6,6 @@ import Seo from "../components/seo"
 const NotFound = () => {
   return (
     <Layout>
-      <Seo title="404 - Page Not Found" />
       <h1>404</h1>
       <p>Page Not Found</p>
       <p>
@@ -14,6 +13,10 @@ const NotFound = () => {
       </p>
     </Layout>
   )
+}
+
+export function Head() {
+  return <Seo title="404 - Page Not Found" />
 }
 
 export default NotFound

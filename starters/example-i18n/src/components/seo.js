@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Seo = ({ description, title, children }) => {
@@ -20,7 +19,10 @@ const Seo = ({ description, title, children }) => {
   const metaDescription = description || site.siteMetadata.description
 
   return (
-    <Helmet title={title} titleTemplate={`%s | ${site.siteMetadata.title}`}>
+    <>
+      <title>
+        {title} | {site.siteMetadata.title}
+      </title>
       <meta name="description" content={metaDescription} />
       <meta name="og:title" content={title} />
       <meta name="og:description" content={metaDescription} />
@@ -30,7 +32,7 @@ const Seo = ({ description, title, children }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
-    </Helmet>
+    </>
   )
 }
 

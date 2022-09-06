@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+// import { useTranslation } from "react-i18next"
 
-const Seo = ({ description, title, children }) => {
+const Seo = ({ description, title, /* i18ntitle, */ children }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,9 +18,14 @@ const Seo = ({ description, title, children }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  // const { t } = useTranslation()
+  // title = i18ntitle ? t(i18ntitle) : title
 
   return (
-    <Helmet title={title} titleTemplate={`%s | ${site.siteMetadata.title}`}>
+    <>
+      <title>
+        {title} | {site.siteMetadata.title}
+      </title>
       <meta name="description" content={metaDescription} />
       <meta name="og:title" content={title} />
       <meta name="og:description" content={metaDescription} />
@@ -30,7 +35,7 @@ const Seo = ({ description, title, children }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
-    </Helmet>
+    </>
   )
 }
 

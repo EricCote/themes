@@ -7,7 +7,6 @@ import Seo from "../components/seo"
 const Index = ({ data }) => {
   return (
     <Layout>
-      <Seo title="Home" />
       <h1>Hello World</h1>
       <p>This is in the Index page.</p>
       <p>
@@ -46,8 +45,12 @@ const Index = ({ data }) => {
 
 export default Index
 
+export function Head() {
+  return <Seo title="Home" />
+}
+
 export const query = graphql`
-  query($locale: String!) {
+  query ($locale: String!) {
     allFile(
       filter: {
         sourceInstanceName: { eq: "blog" }

@@ -7,10 +7,13 @@ const NotFound = () => {
   const { t } = useTranslation("404")
   return (
     <Layout>
-      <Seo title="404" />
       <h1>{t("notFound")}</h1>
     </Layout>
   )
 }
 
 export default NotFound
+
+export function Head() {
+  return <Seo title="404" />
+}

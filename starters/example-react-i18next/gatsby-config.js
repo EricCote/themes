@@ -20,29 +20,65 @@ module.exports = {
         name: `blog`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-theme-i18n`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        defaultLang: `en`,
-        configPath: require.resolve(`./i18n/config.json`),
-      },
+        path: `${__dirname}/i18n/react-i18next`,
+        name: `locale`
+      }
     },
+    `gatsby-plugin-react-helmet`,
+    // {
+    //   resolve: `gatsby-theme-i18n`,
+    //   options: {
+    //     defaultLang: `en`,
+    //     configPath: require.resolve(`./i18n/config.json`),
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-theme-i18n-react-i18next`,
+    //   options: {
+    //     locales: `./i18n/react-i18next`,
+    //     i18nextOptions: {
+    //       ns: ["translation", "blog", "404"],
+    //     },
+    //   },
+    // },
     {
-      resolve: `gatsby-theme-i18n-react-i18next`,
+      resolve: 'gatsby-plugin-react-i18next',
       options: {
-        locales: `./i18n/react-i18next`,
+        localeJsonSourceName: `locale`, 
+        languages:['en','de'],
+        defaultLanguage:'en',
+        siteUrl:'https://example.com',
+        // trailingSlash: 'always',
         i18nextOptions: {
-          ns: ["translation", "blog", "404"],
+          debug: true,
+          fallbackLng: 'en',
+          supportedLngs: ['en','de'],
+          defaultNS: ["translation", "blog", "404"],
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          }
         },
+        // pages: [
+        //   {
+        //     matchPath: '/:lang?/blog/:uid',
+        //     getLanguageFromPath: true
+        //   },
+        //   {
+        //     matchPath: '/preview',
+        //     languages: ['en']
+        //   }
+        // ]
       },
     },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: {
-          default: require.resolve(`./src/components/layout.js`),
-        },
+        // defaultLayouts: {
+        //   default: require.resolve(`./src/components/layout.js`),
+        // },
       },
     },
   ],

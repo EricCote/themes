@@ -1,11 +1,14 @@
 import * as React from "react"
-import { LocalizedLink } from "gatsby-theme-i18n"
-import { useTranslation } from "react-i18next"
+// import { useTranslation } from "react-i18next"
+import { graphql } from 'gatsby'
+import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+const LocalizedLink=Link;
+
 const Page3 = () => {
-  const { t } = useTranslation()
+  const { t } = useI18next()
   return (
     <Layout>
       <Seo title={t("thirdPage")} />
@@ -22,3 +25,21 @@ const Page3 = () => {
 }
 
 export default Page3
+
+
+
+export const query = graphql`
+query($language: String!) {
+  locales: allLocale(
+    filter: { ns: { in: ["translation"] }, language: { eq: $language } }
+  ) {
+    edges {
+      node {
+        ns
+        data
+        language
+      }
+    }
+  }
+}
+`

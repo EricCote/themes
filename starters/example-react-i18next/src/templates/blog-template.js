@@ -1,11 +1,10 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const BlogTemplate = ({ data, pageContext }) => {
+const BlogTemplate = ({ data, pageContext, children }) => {
   const { t } = useTranslation("blog")
   return (
     <Layout>
@@ -13,7 +12,7 @@ const BlogTemplate = ({ data, pageContext }) => {
       <h1>{t("data")}</h1>
       <div>
         {data.mdx ? (
-          <MDXRenderer>{data.mdx.body}</MDXRenderer>
+         children 
         ) : (
           <div>This page hasn't been translated yet</div>
         )}
@@ -26,10 +25,14 @@ const BlogTemplate = ({ data, pageContext }) => {
 
 export default BlogTemplate
 
+// query($locale: String!, $slug: String!) {
+// 
+//      fields: { locale: { eq: $locale } }
+
 export const query = graphql`
-  query($locale: String!, $slug: String!) {
+  query($slug: String!) {
     mdx(
-      fields: { locale: { eq: $locale } }
+
       frontmatter: { slug: { eq: $slug } }
     ) {
       frontmatter {

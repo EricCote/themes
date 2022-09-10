@@ -1,12 +1,15 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { useTranslation } from "react-i18next"
-import { LocalizedLink, LocalesList } from "gatsby-theme-i18n"
+// import { useTranslation } from "react-i18next"
+import { Link,useI18next } from "gatsby-plugin-react-i18next"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+const LocalizedLink=Link;
+//const LocalesList=['en', 'de'];
+
 const Index = ({ data }) => {
-  const { t } = useTranslation()
+  const {t} = useI18next();
   return (
     <Layout>
       <Seo title={t("home")} />
@@ -38,29 +41,47 @@ const Index = ({ data }) => {
         ))}
       </ul>
       <h2>{t("overviewLang")}</h2>
-      <LocalesList />
+      {/* <LocalesList /> */}
     </Layout>
   )
 }
 
 export default Index
 
+//query($locale: String!) {
+// """   
+// childMdx: { fields: { locale: { eq: $locale } } }
+// """
+
+
+
 export const query = graphql`
-  query($locale: String!) {
-    allFile(
-      filter: {
-        sourceInstanceName: { eq: "blog" }
-        childMdx: { fields: { locale: { eq: $locale } } }
+query($language: String!) {
+  locales: allLocale(
+    filter: { ns: { in: ["translation"] }, language: { eq: $language } }
+  ) {
+    edges {
+      node {
+        ns
+        data
+        language
       }
-    ) {
-      nodes {
-        childMdx {
-          frontmatter {
-            slug
-            title
-          }
+    }
+  }
+  allFile(
+    filter: {
+      sourceInstanceName: { eq: "blog" }
+    }
+  ) {
+    nodes {
+      childMdx {
+        frontmatter {
+          slug
+          title
         }
       }
     }
   }
+}
+  
 `

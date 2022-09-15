@@ -32,5 +32,6 @@
   "homepage": "https://github.com/gatsbyjs/themes/tree/master/packages/gatsby-theme-i18n#readme",
   "engines": {
     "node": ">=14.15.0"
-  }
+  },
+  "gitHead": "f1cc0e21cbab3dbe94141b58631c7d8aa44fb270"
 }

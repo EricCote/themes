@@ -1,10 +1,13 @@
 {
   "name": "@ericcote/gatsby-theme-i18n-react-intl",
-  "version": "4.0.3",
+  "version": "4.0.0",
   "main": "index.js",
   "author": "LekoArts <lekoarts@gmail.com>",
   "description": "A Gatsby theme for providing localization support via react-intl. This theme sets up react-intl's context provider so that you can access your translations on every page. Works best together with gatsby-theme-i18n.",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "react-intl": "^5.23.0"
   },

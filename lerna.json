@@ -1,10 +1,10 @@
 {
-  "packages": ["packages/*"],
+  "packages": ["packages/gatsby-theme-i18n","packages/gatsby-theme-i18n-react-i18next","packages/gatsby-theme-i18n-react-intl"],
   "version": "independent",
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "allowBranch": "master",
+      "allowBranch": "publish-fork",
       "bump": "patch",
       "conventionalCommits": true,
       "message": "chore(release): Publish"

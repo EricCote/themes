@@ -32,8 +32,7 @@
     ]
   },
   "workspaces": [
-    "packages/*",
-    "starters/*"
+    "packages/gatsby-theme-i18n","packages/gatsby-theme-i18n-react-i18next","packages/gatsby-theme-i18n-react-intl"
   ],
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",

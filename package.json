@@ -17,7 +17,7 @@
     "ssat:gatsby-starter-theme:serve": "start-server-and-test gatsby-starter-theme:serve http://localhost:9000 cy:run",
     "e2e:dev": "concurrently --kill-others 'yarn ssat:gatsby-starter-theme:dev'",
     "e2e:ci": "yarn gatsby-starter-theme:cy:build && yarn ssat:gatsby-starter-theme:serve",
-    "prepare": "husky install"
+    "prepare": ""
   },
   "lint-staged": {
     "*.{js,jsx}": [

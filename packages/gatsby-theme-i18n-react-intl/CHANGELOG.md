@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/gatsbyjs/themes/compare/@ericcote/gatsby-theme-i18n-react-intl@4.0.2...@ericcote/gatsby-theme-i18n-react-intl@4.0.3) (2022-09-15)
+
+**Note:** Version bump only for package @ericcote/gatsby-theme-i18n-react-intl
+
+
+
+
+
 ## [4.0.2](https://github.com/gatsbyjs/themes/compare/@ericcote/gatsby-theme-i18n-react-intl@4.0.1...@ericcote/gatsby-theme-i18n-react-intl@4.0.2) (2022-09-15)
 
 **Note:** Version bump only for package @ericcote/gatsby-theme-i18n-react-intl

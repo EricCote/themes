@@ -9,7 +9,7 @@ A Gatsby theme for providing localization support via [react-i18next](https://re
 1. Install the theme and its peerDependencies.
 
 ```shell
-npm install gatsby-theme-i18n-react-i18next react-i18next i18next
+npm install @ericcote/gatsby-theme-i18n-react-i18next react-i18next i18next
 ```
 
 2. Add the configuration to your `gatsby-config.js` file:
@@ -18,7 +18,7 @@ npm install gatsby-theme-i18n-react-i18next react-i18next i18next
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-theme-i18n-react-i18next`,
+      resolve: `@ericcote/gatsby-theme-i18n-react-i18next`,
       options: {
         locales: `./i18n/react-i18next`,
         i18nextOptions: {

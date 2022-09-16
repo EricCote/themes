@@ -9,7 +9,7 @@ A Gatsby theme for providing localization support via [react-intl](https://forma
 1. Install the theme and its peerDependencies.
 
 ```shell
-npm install gatsby-theme-i18n-react-intl react-intl
+npm install @ericcote/gatsby-theme-i18n-react-intl react-intl
 ```
 
 2. Add the configuration to your `gatsby-config.js` file:
@@ -18,7 +18,7 @@ npm install gatsby-theme-i18n-react-intl react-intl
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-theme-i18n-react-intl`,
+      resolve: `@ericcote/gatsby-theme-i18n-react-intl`,
       options: {
         defaultLocale: `./i18n/react-intl/en.json`,
       },

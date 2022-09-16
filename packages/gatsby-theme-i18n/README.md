@@ -7,7 +7,7 @@ A Gatsby theme for providing internationalization support to your Gatsby site by
 1. Install `gatsby-theme-i18n`:
 
    ```shell
-   npm install gatsby-theme-i18n gatsby-plugin-react-helmet react-helmet
+   npm install @ericcote/gatsby-theme-i18n gatsby-plugin-react-helmet react-helmet
    ```
 
 2. Add the configuration to your `gatsby-config.js` file:
@@ -16,7 +16,7 @@ A Gatsby theme for providing internationalization support to your Gatsby site by
    module.exports = {
      plugins: [
        {
-         resolve: `gatsby-theme-i18n`,
+         resolve: `@ericcote/gatsby-theme-i18n`,
          options: {
            defaultLang: `en`,
            configPath: require.resolve(`./i18n/config.json`),
@@ -91,7 +91,7 @@ Example:
 
 ```js
 import * as React from "react"
-import { useLocalization } from "gatsby-theme-i18n"
+import { useLocalization } from "@ericcote/gatsby-theme-i18n"
 
 const Example = () => {
   const { locale, config, defaultLang } = useLocalization()
@@ -116,7 +116,7 @@ Example:
 
 ```js
 import * as React from "react"
-import { LocalesList } from "gatsby-theme-i18n"
+import { LocalesList } from "@ericcote/gatsby-theme-i18n"
 
 const Example = () => {
   return (
@@ -137,7 +137,7 @@ Example:
 
 ```js
 import * as React from "react"
-import { LocalizedLink as Link } from "gatsby-theme-i18n"
+import { LocalizedLink as Link } from "@ericcote/gatsby-theme-i18n"
 
 const Example = () => {
   return (
@@ -158,7 +158,7 @@ Example:
 
 ```js
 import * as React from "react"
-import { LocalizedRouter } from "gatsby-theme-i18n"
+import { LocalizedRouter } from "@ericcote/gatsby-theme-i18n"
 import Detail from "../components/detail"
 
 const App = () => {
@@ -181,7 +181,7 @@ Example:
 ```js
 import * as React from "react"
 import { MDXProvider } from "@mdx-js/react"
-import { MdxLink } from "gatsby-theme-i18n"
+import { MdxLink } from "@ericcote/gatsby-theme-i18n"
 
 const components = {
   a: MdxLink,
@@ -208,7 +208,7 @@ Example:
 
 ```js
 import * as React from "react"
-import { LocaleContext } from "gatsby-theme-i18n"
+import { LocaleContext } from "@ericcote/gatsby-theme-i18n"
 
 const Example = () => {
   const locale = React.useContext(LocaleContext)

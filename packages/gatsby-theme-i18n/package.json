@@ -30,9 +30,9 @@
   "repository": {
     "type": "git",
     "directory": "packages/gatsby-theme-i18n",
-    "url": "https://github.com/gatsbyjs/themes.git"
+    "url": "https://github.com/ericcote/themes.git"
   },
-  "homepage": "https://github.com/gatsbyjs/themes/tree/master/packages/gatsby-theme-i18n#readme",
+  "homepage": "https://github.com/ericcote/themes/tree/master/packages/gatsby-theme-i18n#readme",
   "engines": {
     "node": ">=14.15.0"
   },

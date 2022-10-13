@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from "./layout"
-import { LocalizedLink } from "gatsby-theme-i18n"
+import { LocalizedLink } from "@ericcote/gatsby-theme-i18n"
 import Seo from "./seo"
 
 const Name = ({ name, locale }) => (

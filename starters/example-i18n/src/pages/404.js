@@ -1,5 +1,5 @@
 import * as React from "react"
-import { LocalizedLink } from "gatsby-theme-i18n"
+import { LocalizedLink } from "@ericcote/gatsby-theme-i18n"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 

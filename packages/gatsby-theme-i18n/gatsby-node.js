@@ -123,7 +123,7 @@ exports.onCreateNode = ({ node, actions }, themeOptions) => {
   const { defaultLang } = withDefaults(themeOptions)
 
   if (node.internal.type === `Mdx`) {
-      const name = path.basename(
+    const name = path.basename(
       node.fileAbsolutePath ?? node.internal.contentFilePath,
       `.mdx`
     )
@@ -147,7 +147,7 @@ exports.onCreatePage = ({ page, actions }, themeOptions) => {
     return
   }
 
-  const originalPath = page.path
+  let originalPath = page.path
 
   deletePage(page)
 
@@ -159,6 +159,63 @@ exports.onCreatePage = ({ page, actions }, themeOptions) => {
     defaultLang,
   })
 
+  if (
+    page.component.toLowerCase().endsWith(`.mdx`) &&
+    !page.component.includes("?__contentFilePath=")
+  ) {
+    const name = path.basename(page.component, `.mdx`)
+
+    const parts = name.split(`.`)
+
+    let code = defaultLang
+
+    // if a non-default language, (ex: "page.fr.mdx")
+    // then delete the .fr part, so it becomes "page.mdx"
+    // (later below, we will rename this to "fr/page.mdx")
+    if (parts.length > 1) {
+      code = parts.at(-1)
+      originalPath = originalPath.replace(`.${code}`, ``)
+    }
+
+    //
+    //if not a supported language, just return.
+    //the page will not be exposed
+    let locale = languages.find((lang) => lang.code === code)
+    if (!locale) {
+      return
+    }
+
+    const newPage = {
+      component: page.component,
+      path: localizedPath({
+        defaultLang,
+        prefixDefault,
+        locale: code,
+        path: originalPath,
+      }),
+      matchPath: page.matchPath
+        ? localizedPath({
+            defaultLang,
+            prefixDefault,
+            locale: code,
+            path: page.matchPath,
+          })
+        : page.matchPath,
+      context: {
+        ...page.context,
+        locale: locale.code,
+        hrefLang: locale.hrefLang,
+        originalPath,
+        dateFormat: locale.dateFormat,
+      },
+    }
+
+    createPage(newPage)
+    //mdx exits here.  all other pages will be handled next
+
+    return
+  }
+
   languages.forEach((locale) => {
     let theFilePath = page.component
 
@@ -168,10 +225,12 @@ exports.onCreatePage = ({ page, actions }, themeOptions) => {
     // ex: index.de.mdx ==> index.mdx
     if (mdxFile) {
       //split the filename in three parts split by the dot.
-      let [thePath, /* lang */, ext] = mdxFile.split(`.`)
-      if (ext === `mdx`) {  //if there's data in the third part, just keep the first and last part, removing the language
+      let [thePath /* lang */, , ext] = mdxFile.split(`.`)
+      if (ext === `mdx`) {
+        //if there's data in the third part, just keep the first and last part, removing the language
         theFilePath = `${thePath}.${ext}`
-      } else {   //if there's no content in the third part, it means that there's no language part. No need to remove the language
+      } else {
+        //if there's no content in the third part, it means that there's no language part. No need to remove the language
         theFilePath = mdxFile
       }
 
@@ -180,9 +239,9 @@ exports.onCreatePage = ({ page, actions }, themeOptions) => {
       if (ext === `mdx` && locale.code !== defaultLang) {
         if (fs.existsSync(`${thePath}.${locale.code}.${ext}`)) {
           theFilePath = `${thePath}.${locale.code}.${ext}`
-        }else{
+        } else {
           //nothing to render if file doen't exist
-          theFilePath=''
+          theFilePath = ""
         }
       }
 
@@ -190,13 +249,21 @@ exports.onCreatePage = ({ page, actions }, themeOptions) => {
     }
 
     const newPage = {
+      component: theFilePath,
       path: localizedPath({
         defaultLang,
         prefixDefault,
         locale: locale.code,
         path: originalPath,
       }),
-      component: theFilePath,
+      matchPath: page.matchPath
+        ? localizedPath({
+            defaultLang,
+            prefixDefault,
+            locale: locale.code,
+            path: page.matchPath,
+          })
+        : page.matchPath,
       context: {
         ...page.context,
         locale: locale.code,
@@ -214,7 +281,7 @@ exports.onCreatePage = ({ page, actions }, themeOptions) => {
 
     createPage(newPage)
   })
-  
+
   // When prefixDefault is set the default development & production 404 pages
   // will be deleted but not re-created in the above `languages.forEach` segment
   // Thus we'll re-create them manually here

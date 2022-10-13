@@ -30,7 +30,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-theme-i18n`,
+      resolve: `@ericcote/gatsby-theme-i18n`,
       options: {
         defaultLang: `en`,
         locales: process.env.LOCALES || `en de`,

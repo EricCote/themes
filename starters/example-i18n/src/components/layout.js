@@ -1,6 +1,6 @@
 import * as React from "react"
 import { MDXProvider } from "@mdx-js/react"
-import { MdxLink, LocalizedLink } from "gatsby-theme-i18n"
+import { MdxLink, LocalizedLink } from "@ericcote/gatsby-theme-i18n"
 
 const components = {
   a: MdxLink,

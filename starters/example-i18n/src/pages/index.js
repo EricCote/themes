@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { LocalizedLink, LocalesList } from "gatsby-theme-i18n"
+import { LocalizedLink, LocalesList } from "@ericcote/gatsby-theme-i18n"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -47,7 +47,7 @@ const Index = ({ data }) => {
 export default Index
 
 export const query = graphql`
-  query($locale: String!) {
+  query ($locale: String!) {
     allFile(
       filter: {
         sourceInstanceName: { eq: "blog" }

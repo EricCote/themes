@@ -175,6 +175,9 @@ exports.onCreatePage = ({ page, actions }, themeOptions) => {
     if (parts.length > 1) {
       code = parts.at(-1)
       originalPath = originalPath.replace(`.${code}`, ``)
+      if (originalPath.endsWith("index/")) {
+        originalPath = originalPath.replace("index/", "")
+      }
     }
 
     //

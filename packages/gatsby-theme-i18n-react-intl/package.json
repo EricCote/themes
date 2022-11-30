@@ -1,6 +1,6 @@
 {
   "name": "@ericcote/gatsby-theme-i18n-react-intl",
-  "version": "4.1.1",
+  "version": "4.1.5",
   "main": "index.js",
   "author": "LekoArts <lekoarts@gmail.com>",
   "description": "A Gatsby theme for providing localization support via react-intl. This theme sets up react-intl's context provider so that you can access your translations on every page. Works best together with gatsby-theme-i18n.",
@@ -12,10 +12,10 @@
     "react-intl": "^5.23.0"
   },
   "peerDependencies": {
-    "gatsby": "^4.0.0",
+    "gatsby": "^4.0.0 || ^5.0.0",
     "react": "^16.9.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.9.0 || ^17.0.0 || ^18.0.0",
-    "react-intl": "^5.15.7"
+    "react-intl": "^5.15.7 || 6.0.0"
   },
   "keywords": [
     "i18n",

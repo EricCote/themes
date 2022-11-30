@@ -1095,15 +1095,15 @@
 
 "@ericcote/gatsby-theme-i18n-react-i18next@file:/Users/eric/projects/themes/packages/gatsby-theme-i18n-react-i18next":
   "resolved" "file:packages/gatsby-theme-i18n-react-i18next"
-  "version" "4.1.9"
+  "version" "4.1.11"
 
 "@ericcote/gatsby-theme-i18n-react-intl@file:/Users/eric/projects/themes/packages/gatsby-theme-i18n-react-intl":
   "resolved" "file:packages/gatsby-theme-i18n-react-intl"
-  "version" "4.1.10"
+  "version" "4.1.11"
 
 "@ericcote/gatsby-theme-i18n@file:/Users/eric/projects/themes/packages/gatsby-theme-i18n":
   "resolved" "file:packages/gatsby-theme-i18n"
-  "version" "4.1.8"
+  "version" "4.1.11"
 
 "@eslint/eslintrc@^0.4.3":
   "integrity" "sha512-J6KFFz5QCYUJq3pf0mjEcCJVERbzv71PUIDczuh9JkwGEzced6CO5ADLHB1rbf/+oPBtoPfMYNOpGDzCANlbXw=="
@@ -5302,10 +5302,10 @@
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.1.1.tgz"
   "version" "3.1.1"
 
-"cypress@^11.1.0", "cypress@^2.1.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0", "cypress@^9.0.0 || ^10.0.0":
-  "integrity" "sha512-u61UGwtu7lpsNWLUma/FKNOsrjcI6wleNmda/TyKHe0dOBcVjbCPlp1N6uwFZ0doXev7f/91YDpU9bqDCFeBLA=="
-  "resolved" "https://registry.npmjs.org/cypress/-/cypress-11.2.0.tgz"
-  "version" "11.2.0"
+"cypress@^10.0.0", "cypress@^2.1.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0", "cypress@^9.0.0 || ^10.0.0":
+  "integrity" "sha512-lsaE7dprw5DoXM00skni6W5ElVVLGAdRUUdZjX2dYsGjbY/QnpzWZ95Zom1mkGg0hAaO/QVTZoFVS7Jgr/GUPA=="
+  "resolved" "https://registry.npmjs.org/cypress/-/cypress-10.11.0.tgz"
+  "version" "10.11.0"
   dependencies:
     "@cypress/request" "^2.88.10"
     "@cypress/xvfb" "^1.2.4"

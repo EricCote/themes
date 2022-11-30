@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.11](https://github.com/ericcote/themes/compare/@ericcote/gatsby-theme-i18n@4.1.1...@ericcote/gatsby-theme-i18n@4.1.11) (2022-11-30)
+
+
+
+## 4.1.8 (2022-11-30)
+
+
+
+## 4.1.5 (2022-11-30)
+
+**Note:** Version bump only for package @ericcote/gatsby-theme-i18n
+
+
+
+
+
 ## [4.1.1](https://github.com/ericcote/themes/compare/@ericcote/gatsby-theme-i18n@4.1.0...@ericcote/gatsby-theme-i18n@4.1.1) (2022-09-16)
 
 **Note:** Version bump only for package @ericcote/gatsby-theme-i18n

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
-import { LocalizedLink, LocalesList } from "gatsby-theme-i18n"
+import { LocalizedLink, LocalesList } from "@ericcote/gatsby-theme-i18n"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 

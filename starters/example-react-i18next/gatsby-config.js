@@ -22,14 +22,14 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-theme-i18n`,
+      resolve: `@ericcote/gatsby-theme-i18n`,
       options: {
         defaultLang: `en`,
         configPath: require.resolve(`./i18n/config.json`),
       },
     },
     {
-      resolve: `gatsby-theme-i18n-react-i18next`,
+      resolve: `@ericcote/gatsby-theme-i18n-react-i18next`,
       options: {
         locales: `./i18n/react-i18next`,
         i18nextOptions: {

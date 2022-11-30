@@ -1056,10 +1056,15 @@
   resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.5.4.tgz#1a89069978734e132fa4a59414ddb64e4b94fde7"
   integrity sha512-qnikpQgi30AS01aFlNQV6l8/qdZIcP76mp90ti+u4rucXHsn4afSKivQXApqxvrQG9+Ibv45STyvHizvxef/7A==
 
-"@ericcote/gatsby-theme-i18n@^4.1.1":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@ericcote/gatsby-theme-i18n/-/gatsby-theme-i18n-4.1.3.tgz#42f16b0fd7825e48c4dff78be53c92cf187452df"
-  integrity sha512-mFnBp4OuwlVFWc4FQqMTxzdoGa+DN3GeiqU9BSCCN6KKvKZiubNj7kmbM0iCo3fNAE6j5KtrkZrjlhK795CIvA==
+"@ericcote/gatsby-theme-i18n-react-i18next@^4.1.2":
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/@ericcote/gatsby-theme-i18n-react-i18next/-/gatsby-theme-i18n-react-i18next-4.1.9.tgz#4fda6984032ce6212692ea08a3d33717b8468514"
+  integrity sha512-Q/Z0p5ifaTRHmNY6M/f1O2eL7gGBcQ6uGx/nS7Itn9Z9uZuTQjAdNwqZhgI3laLSuLAqPSpgBZpv4mzA7aBymw==
+
+"@ericcote/gatsby-theme-i18n@^4.1.2":
+  version "4.1.8"
+  resolved "https://registry.yarnpkg.com/@ericcote/gatsby-theme-i18n/-/gatsby-theme-i18n-4.1.8.tgz#55e7721ceac2879e54f125917c29029b3bb78094"
+  integrity sha512-UeGUDVs7VEUrzOAfBBtmBe7TCjyRm1qQOVBNo1gDLAI9nB+IEDOTrStU74vp5HPWZzIgH3DT3nc6GABJ9F2dWg==
 
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
@@ -5102,13 +5107,6 @@ gatsby-parcel-config@^1.2.0:
     "@parcel/runtime-js" "2.6.2"
     "@parcel/transformer-js" "2.6.2"
     "@parcel/transformer-json" "2.6.2"
-
-gatsby-plugin-create-client-paths@^4.3.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-create-client-paths/-/gatsby-plugin-create-client-paths-4.9.0.tgz#7a62d73f11e8a495c2825c24723698016206fe41"
-  integrity sha512-armchfoLrmpjnQYfmWgFMsnjlRTAXBdxuPBOgilcbopmcX3wLjRb/NwzWokqV9ovmo090LF3Dm0dGQTL4nap7A==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
 
 gatsby-plugin-mdx@^5.2.0:
   version "5.2.0"

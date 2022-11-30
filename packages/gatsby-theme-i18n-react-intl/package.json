@@ -9,7 +9,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "react-intl": "^5.23.0"
+    "react-intl": "^6.2.0"
   },
   "peerDependencies": {
     "gatsby": "^4.0.0 || ^5.0.0",

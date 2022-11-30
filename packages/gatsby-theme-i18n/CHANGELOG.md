@@ -3,71 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [4.1.11](https://github.com/ericcote/themes/compare/@ericcote/gatsby-theme-i18n@4.1.1...@ericcote/gatsby-theme-i18n@4.1.11) (2022-11-30)
-
-
+## [4.1.12](https://github.com/ericcote/themes/compare/@ericcote/gatsby-theme-i18n@4.1.1...@ericcote/gatsby-theme-i18n@4.1.12) (2022-11-30)
 
 ## 4.1.8 (2022-11-30)
-
-
 
 ## 4.1.5 (2022-11-30)
 
 **Note:** Version bump only for package @ericcote/gatsby-theme-i18n
 
+## [4.1.11](https://github.com/ericcote/themes/compare/@ericcote/gatsby-theme-i18n@4.1.1...@ericcote/gatsby-theme-i18n@4.1.11) (2022-11-30)
 
+## 4.1.8 (2022-11-30)
 
+## 4.1.5 (2022-11-30)
 
+**Note:** Version bump only for package @ericcote/gatsby-theme-i18n
 
 ## [4.1.1](https://github.com/ericcote/themes/compare/@ericcote/gatsby-theme-i18n@4.1.0...@ericcote/gatsby-theme-i18n@4.1.1) (2022-09-16)
 
 **Note:** Version bump only for package @ericcote/gatsby-theme-i18n
 
-
-
-
-
 # [4.1.0](https://github.com/gatsbyjs/themes/compare/@ericcote/gatsby-theme-i18n@4.0.2...@ericcote/gatsby-theme-i18n@4.1.0) (2022-09-15)
 
 **Note:** Version bump only for package @ericcote/gatsby-theme-i18n
-
-
-
-
 
 ## [4.0.1](https://github.com/gatsbyjs/themes/compare/@ericcote/gatsby-theme-i18n@4.0.2...@ericcote/gatsby-theme-i18n@4.0.1) (2022-09-15)
 
 **Note:** Version bump only for package @ericcote/gatsby-theme-i18n
 
-
-
-
-
 ## [4.0.2](https://github.com/gatsbyjs/themes/compare/@ericcote/gatsby-theme-i18n@4.0.1...@ericcote/gatsby-theme-i18n@4.0.2) (2022-09-15)
 
 **Note:** Version bump only for package @ericcote/gatsby-theme-i18n
 
-
-
-
-
 ## 4.0.1 (2022-09-15)
-
 
 ### Bug Fixes
 
-* **gatsby-theme-i18n:** Correct HTML lang ([#92](https://github.com/gatsbyjs/themes/issues/92)) ([e6a3b30](https://github.com/gatsbyjs/themes/commit/e6a3b30485999bbf8f5bffb75a2b292f0008f7a0))
-
+- **gatsby-theme-i18n:** Correct HTML lang ([#92](https://github.com/gatsbyjs/themes/issues/92)) ([e6a3b30](https://github.com/gatsbyjs/themes/commit/e6a3b30485999bbf8f5bffb75a2b292f0008f7a0))
 
 ### Features
 
-* **gatsby-theme-i18n:** Add "prefixDefault" option ([#75](https://github.com/gatsbyjs/themes/issues/75)) ([631ae27](https://github.com/gatsbyjs/themes/commit/631ae27ad4541be60cb4e3893bfa0cf0aebc7d84))
-* **gatsby-theme-i18n:** Localized matchPath & LocalizedRouter ([#64](https://github.com/gatsbyjs/themes/issues/64)) ([cf54dcf](https://github.com/gatsbyjs/themes/commit/cf54dcfc0c4bc9f2fcb030a84ef167d9292c29ed))
-* upgrade to gatsby v4 ([#149](https://github.com/gatsbyjs/themes/issues/149)) ([ca08c16](https://github.com/gatsbyjs/themes/commit/ca08c168431b48ebc16fcdded16f4e02c852e41b))
-
-
-
-
+- **gatsby-theme-i18n:** Add "prefixDefault" option ([#75](https://github.com/gatsbyjs/themes/issues/75)) ([631ae27](https://github.com/gatsbyjs/themes/commit/631ae27ad4541be60cb4e3893bfa0cf0aebc7d84))
+- **gatsby-theme-i18n:** Localized matchPath & LocalizedRouter ([#64](https://github.com/gatsbyjs/themes/issues/64)) ([cf54dcf](https://github.com/gatsbyjs/themes/commit/cf54dcfc0c4bc9f2fcb030a84ef167d9292c29ed))
+- upgrade to gatsby v4 ([#149](https://github.com/gatsbyjs/themes/issues/149)) ([ca08c16](https://github.com/gatsbyjs/themes/commit/ca08c168431b48ebc16fcdded16f4e02c852e41b))
 
 # [3.0.0](https://github.com/gatsbyjs/themes/compare/gatsby-theme-i18n@1.0.5...gatsby-theme-i18n@3.0.0) (2021-12-03)
 

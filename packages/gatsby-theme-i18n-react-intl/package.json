@@ -9,13 +9,13 @@
     "access": "public"
   },
   "devDependencies": {
-    "react-intl": "^6.2.0"
+    "react-intl": ">=6.2.0"
   },
   "peerDependencies": {
-    "gatsby": "^4.0.0 || ^5.0.0",
-    "react": "^16.9.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^16.9.0 || ^17.0.0 || ^18.0.0",
-    "react-intl": "^5.15.7 || 6.0.0"
+    "gatsby": ">=4.0.0",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0",
+    "react-intl": ">=5.15.7"
   },
   "keywords": [
     "i18n",

@@ -1,7 +1,10 @@
 {
-  "packages": ["packages/gatsby-theme-i18n","packages/gatsby-theme-i18n-react-i18next","packages/gatsby-theme-i18n-react-intl"],
+  "packages": [
+    "packages/gatsby-theme-i18n",
+    "packages/gatsby-theme-i18n-react-i18next",
+    "packages/gatsby-theme-i18n-react-intl"
+  ],
   "version": "independent",
-  "useWorkspaces": true,
   "command": {
     "publish": {
       "allowBranch": "publish-fork",
